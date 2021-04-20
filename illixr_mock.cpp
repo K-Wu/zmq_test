@@ -19,23 +19,13 @@ int main() {
 
   char ack[4];
   //app source receiving
-  char send_buf1[72];
-  char send_buf2[360960];
-  char send_buf3[72];
-  char send_buf4[360960];
-  char send_buf5[8];
-  char send_buf6[4];
-  char send_buf7[8];
+  char send_buf1[164];
+  char send_buf2[721920];
   for(int idx=0;idx<10;idx++){
   auto timestamp1 = std::chrono::high_resolution_clock::now();
-  zmq_send(sock_source, send_buf1, 72, 0);
-  zmq_send(sock_source, send_buf2, 360960, 0);
-  zmq_send(sock_source, send_buf3, 72, 0);
-  zmq_send(sock_source, send_buf4, 360960, 0);
-  zmq_send(sock_source, send_buf5, 8, 0);
-  zmq_send(sock_source, send_buf6, 4, 0);
-  zmq_send(sock_source, send_buf7, 8, 0);
-  zmq_recv(sock_source, ack, 4, 0);
+  zmq_send(sock_source, send_buf1, 164, 0);
+  zmq_send(sock_source, send_buf2, 721920, 0);
+  //zmq_recv(sock_source, ack, 4, 0);
   auto timestamp2 = std::chrono::high_resolution_clock::now();
   //app sink sending
   char recv_buf[72];
