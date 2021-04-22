@@ -15,7 +15,7 @@ int main() {
   void *ctx_appsink, *sock_appsink;
   ctx_appsink = zmq_ctx_new();
   sock_appsink = zmq_socket(ctx_appsink, ZMQ_PAIR);
-  zmq_connect(sock_appsink, "tcp://192.17.102.20:19435");//mxre machine ip
+  zmq_connect(sock_appsink, "tcp://192.17.102.20:19435");//illixr machine ip
 
   char ack[4];
   //app source receiving
